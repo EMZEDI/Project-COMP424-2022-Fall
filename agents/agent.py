@@ -18,7 +18,8 @@ class Agent:
         Parameters
         ----------
         chess_board : numpy.ndarray of shape (board_size, board_size, 4)
-            The chess board.
+            The chess board. board_size := num_rows
+            https://edstem.org/us/courses/28046/discussion/2138340
         my_pos : tuple of int
             The position of the agent.
         adv_pos : tuple of int

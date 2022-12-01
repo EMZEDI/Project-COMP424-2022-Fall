@@ -16,6 +16,10 @@ class RandomAgent(Agent):
         self.autoplay = True
 
     def step(self, chess_board, my_pos, adv_pos, max_step):
+        """Randomly moves the bot agent to a slot, checking that the constraints are satisfied.
+        Only for 300 iterations the constraint will be checked. If the iteration exceeds the 300 limit, 
+        the agent will stay at its position and randomly enclose one other wall.
+        """
         # Moves (Up, Right, Down, Left)
         ori_pos = deepcopy(my_pos)
         moves = ((-1, 0), (0, 1), (1, 0), (0, -1))
